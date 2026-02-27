@@ -80,7 +80,7 @@
     const { createApp } = Vue;
 
     // 全局设置 axios 的 baseURL
-    axios.defaults.baseURL = 'https://www.en9.cn';
+    axios.defaults.baseURL = `${window.location.protocol}//${window.location.host}`;
 
     createApp({
       data() {

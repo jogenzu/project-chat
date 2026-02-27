@@ -15,8 +15,8 @@ RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 COPY requirements.txt .
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r requirements.txt 
 
-RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
-    sed -i 's/security.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+#RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
+#    sed -i 's/security.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
  
 # 安装 supervisor
 RUN apt-get update && apt-get install -y supervisor && \
