@@ -5,10 +5,10 @@ services:
       dockerfile: Dockerfile
     #mem_limit: 200m
     volumes:
-      - /etc/localtime:/etc/localtime:ro
       - ./app:/app
     environment:
       - PYTHONUNBUFFERED=1
+      - TZ=Asia/Shanghai
       #- ES_HOST=172.26.219.10
       #- ES_PORT=9200
       - ES_URL=http://172.26.219.10:9200

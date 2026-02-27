@@ -382,7 +382,7 @@
     const { createApp } = Vue;
     
     // 设置API基础URL - 确保与服务器地址匹配
-    const API_BASE_URL = 'https://chat.aieg.top';
+    const API_BASE_URL = `${window.location.protocol}//${window.location.host}`;
     
     // 全局设置 axios 的 baseURL
     axios.defaults.baseURL = API_BASE_URL;
